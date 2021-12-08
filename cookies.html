@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Cookies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+<body>
+   
+   <h1>hello Cookies Page</h1>
+   <button onclick="getApiExmpale()">Get Api</button>
+   <!-- <iframe src="https://192.168.1.106:3000/public/shared" title="description"></iframe> -->
+
+    <script>
+
+function getApiExmpale() {
+   console.log('--getApi');
+
+   fetch('https://poc.wellknownclub.net/public/shared', {
+       credentials: 'include',
+       crossDomain: true
+    }).then(response => response.text()).then(
+        data => console.log(data)
+    );
+
+}
+
+
+    </script>
+
+    </body>
+</html>
